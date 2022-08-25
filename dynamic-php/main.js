@@ -8,7 +8,7 @@ const app = new Vue({
     methods: {
         getRecords: function () {
             axios
-                .get("http://localhost/Php_api/php-ajax-dischi/db.php")
+                .get("../db.php")
                 .then((result) => {
                     this.records = result.data;
                     console.log(this.records);

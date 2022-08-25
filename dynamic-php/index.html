@@ -21,19 +21,13 @@
 
         <div class="container">
             <div class="row">
-                    <div class="col-3 d-flex flex-wrap p-5">
-                        <div class="card p-2">
-                            <img class="img-fluid" :src="records.cover" class="card-img-top p-3" alt="cover" />
-                            <div class="card-body">
-
-                                <h5 class="card-title text-white fw-bold"> <?php echo $record['title']; ?></h5>
-                                <p class="card-text fw-bold"><?php echo $record['author']; ?></p>
-                                <p class="card-text"><?php echo $record['year']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
+                <div class="col-8 offset-4">
+                    <ul>
+                        <h2>Albums by title</h2>
+                        <li id="list" v-for="record in records">{{ record.title }}</li>
+                    </ul>
             </div>
+        </div>
         </div>
 
 
