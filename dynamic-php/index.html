@@ -17,21 +17,69 @@
 
 <body>
     <div id="app">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <div>
+                        <img class="brandlogo" src="../img/musiclogo.png" alt="brand_logo" />
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#">Link</a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#" tabindex="-1">Contacts</a>
+                            </li>
+                        </ul>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-8 offset-4">
-                    <ul>
-                        <h2>Albums by title</h2>
-                        <li id="list" v-for="record in records">{{ record.title }}</li>
-                    </ul>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <select class="form-select" name="Select genres">
+                                        <option value="">Select genre</option>
+                                        <option value="">Rock</option>
+                                        <option value="">Pop</option>
+                                        <option value="">Jazz</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap p-5">
+                        <div class="card p-2" v-for="record in records">
+                            <img class="img-fluid" :src="record.cover" class="card-img-top p-3" :alt="record.title" />
+                            <div class="card-body">
+
+                                <h5 class="card-title text-white fw-bold"> {{ record.title }}</h5>
+                                <p class="card-text fw-bold">{{ record.author }}</p>
+                                <p class="card-text">{{ record.year }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        </div>
 
-
+        </main>
     </div>
+
 
 
 
