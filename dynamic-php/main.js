@@ -8,7 +8,7 @@ const app = new Vue({
     methods: {
         getRecords: function () {
             axios
-                .get("../db.php")
+                .get("../controller.php")
                 .then((result) => {
                     this.records = result.data;
                     console.log(this.records);
