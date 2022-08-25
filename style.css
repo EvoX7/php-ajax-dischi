@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(16, 80, 208);
+}
+
+/* Header  */
+
+.navbar {
+    background-color: #3a9efd;
+}
+
+.brandlogo {
+    width: 100px;
+}
+
+/* Main  */
+
+.card {
+    background-color: #3a9efd;
+    width: 15rem;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #ffc107;
+}
+
+#list {
+    color: white;
+}
+
+h2 {
+    color: #ffc107;
+}
